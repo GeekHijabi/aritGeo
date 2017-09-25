@@ -11,6 +11,16 @@ describe('aritGeo', function() {
 
     });
 
+    describe('Handle single input', function() {
+        it('should  return Arithmetic for [1]', function() {
+            assert.equal(app.aritGeo([1]), '0');
+        });
+
+    describe('Handle two digit input', function() {
+        it('should  return Arithmetic for [1]', function() {
+            assert.equal(app.aritGeo([1, 2]), '0');
+        });
+
 
     describe('Handle Arithmetic  input', function() {
         it('should  return Arithmetic for [1,2,3,4,5]', function() {
@@ -62,5 +72,7 @@ describe('aritGeo', function() {
         });
 
 
-    });
+    })
+})
+ })
 })
