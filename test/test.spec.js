@@ -1,8 +1,8 @@
 const assert = require('chai').assert;
-const app = require('../src/arithGeo.js');
+const app = require('../src/aritgeo.js');
 
 
-describe('arithGeo', function() {
+describe('aritGeo', function() {
 
     describe('Input empty value', () => {
         it('should  return 0 for []', function() {
@@ -16,7 +16,7 @@ describe('arithGeo', function() {
         it('should  return Arithmetic for [1,2,3,4,5]', function() {
             assert.equal(app.aritGeo([1, 2, 3, 4, 5]), 'Arithmetic');
         });
-`
+
         it('should  return Arithmetic for [5,10,15,20,25]', function() {
             assert.equal(app.aritGeo([5, 10, 15, 20, 25]), 'Arithmetic');
         });
@@ -30,16 +30,12 @@ describe('arithGeo', function() {
 
     describe('Handle Geometric  input', function() {
 
-        it('should  return Geometric for [1,6,36,216]', function() {
-            assert.equal(app.aritGeo([1, 6, 36, 216, ]), 'Geometric');
+        it('should  return Geometric for [200,100,50]', function() {
+            assert.equal(app.aritGeo([200, 100, 50]), 'Geometric');
         });
 
-        it('should  return Geometric for [100,20,5,1]', function() {
-            assert.equal(app.aritGeo([100, 20, 4]), 'Geometric');
-        });
-
-        it('should  return Geometric for [10,5,2.5]', function() {
-            assert.equal(app.aritGeo([1, 3, 9, 27]), 'Geometric');
+        it('should  return Geometric for [3, 9, 27, 81]', function() {
+            assert.equal(app.aritGeo([3, 9, 27, 81]), 'Geometric');
         });
 
         it('should  return Geometric for [1,0.5,0.25,0.125]', function() {
@@ -48,7 +44,6 @@ describe('arithGeo', function() {
     });
 
     describe('Handle Non geometric or arithmetic  input', function() {
-        //Neither geometric or arithmetic
         it('should  return -1 for [1,3,3,54,9]', function() {
             assert.equal(app.aritGeo([1, 3, 3, 54, 9]), -1);
         });
@@ -57,13 +52,13 @@ describe('arithGeo', function() {
             assert.equal(app.aritGeo([1, 1, 1, 4, 9]), -1);
         });
 
-        it('should  return -1 for [1,"hi",1,4,9]', function() {
-            assert.equal(app.aritGeo([1, "hi", 1, 4, 9]), -1);
+        it('should  return -1 for ["a",4, 9]', function() {
+            assert.equal(app.aritGeo(['a', 4, 9]), -1);
         });
 
 
-        it('should  return -1 for ["","hi",1,4,9]', function() {
-            assert.equal(app.aritGeo(["", "hi", 1, 4, 9]), -1);
+        it('should  return -1 for ["",1,4,9]', function() {
+            assert.equal(app.aritGeo(['', 1, 4, 9]), -1);
         });
 
 

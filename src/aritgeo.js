@@ -1,4 +1,5 @@
-let aritGeo = (arr) =>{
+module.exports = {
+aritGeo: (arr) =>{
 	if (arr.length < 1){
 		return 0;
 	} 
@@ -20,15 +21,16 @@ else {
 		} 
 
 		if (arithmetic === true){
-			return 'arithmetic';
+			return 'Arithmetic';
 		}
 
 		if (geometric === true){
-			return 'geometric'
+			return 'Geometric'
 		}
    if(arithmetic === false && geometric === false){
     	return -1
     }
 
 	}
+}
 }
