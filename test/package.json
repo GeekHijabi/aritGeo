@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.spec.js",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha test.spec.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
